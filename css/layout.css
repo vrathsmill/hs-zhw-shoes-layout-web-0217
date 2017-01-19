@@ -24,60 +24,28 @@
 
 /* Posititoning Classes */
 
-.col-1{
-  float:left;
+.row {
+  clear: both;
+  margin-bottom: 2%;
 }
 
-.col-2{
-  float:left;
-  width:66%;
+.row:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
 }
 
-.col-3{
+[class*="col-"] {
   float: left;
+  margin-left: 2%;
 }
 
-.row-2{
-  height:550px;
+[class*="col-"]:first-child {
+  margin-left: 0;
 }
 
-
-section:last-child{
-  float:right;
-}
-
-
-.border_right {
-    border-right: 1px dotted #ccc;
-    float: left;
-    margin-right: 13px;
-    width: 33%;
-}
-
-#archive{
-  margin-bottom: 10px;
-  margin-left: 18px;
-  margin-top: 0;
-  width: 32%;
-}
-
-#deals {
-  text-align: justify;
-  clear:both;
-  padding-top:10px;
-}
-
-#deals > div {
-  width: 32%;
-  display: inline-block;
-  vertical-align: top;
-
-  *display: inline;
-  zoom: 1;
-}
-
-#deals:after {
-  content: "";
-  width: 100%;
-  display: inline-block;
-}
+.col-4 { width: 32%; }
+.col-8 { width: 66%; }
